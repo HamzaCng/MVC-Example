@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CBAB449-F384-48BC-AC08-95F302B3DC55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yayakos.BLL</RootNamespace>
+    <AssemblyName>Yayakos.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProductService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonType\CommonType.csproj">
+      <Project>{e2309d10-4b7c-4af3-9d37-f900990af78d}</Project>
+      <Name>CommonType</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{af691675-13b3-42a9-8274-0ec982d5fda1}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helpers\Helpers.csproj">
+      <Project>{df3ee0fd-cb35-4d37-abfc-861e84dfdf46}</Project>
+      <Name>Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yayakos.BLL.Abstracts\Yayakos.BLL.Abstracts.csproj">
+      <Project>{e6588698-8ded-4649-b734-045e2cdcebf9}</Project>
+      <Name>Yayakos.BLL.Abstracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yayakos.Dal\Yayakos.Dal.csproj">
+      <Project>{b8ca41cc-48b3-4a77-9617-16440b33762c}</Project>
+      <Name>Yayakos.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yayakos.DTOs\Yayakos.DTOs.csproj">
+      <Project>{f7db332b-7652-43b2-91b8-bf9d33dc6ca7}</Project>
+      <Name>Yayakos.DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yayakos.Entities\Yayakos.Entities.csproj">
+      <Project>{e05cfc95-5a01-428a-bbf7-015b9bd009c6}</Project>
+      <Name>Yayakos.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
